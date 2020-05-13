@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>‿( ́ ̵ _-`)‿</title>
+</head>
+<body>
+    <div class="container">
+        <p id="joke" ondblclick="nextLine()">
+          Knock, knock...
+        </p>
+    </div>
+</body>
+
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    #joke {
+        cursor: grabbing;
+        font-size: 2rem;
+    }
+    body{
+        user-select: none;
+    }
+</style>
+
+<script>
+    let knocks = 1
+    let answers = ["Knock, knock...", "Who's there?", "Dejav", "Dejav who?"]
+    function nextLine(){
+        let line = knocks%answers.length
+        document.querySelector("#joke").textContent = answers[line]
+        knocks++;
+    }
+</script>
+
+
+
+</html>
