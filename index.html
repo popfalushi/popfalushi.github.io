@@ -1,48 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>‿( ́ ̵ _-`)‿</title>
-</head>
-<body>
-    <div class="container">
-        <p id="joke" ondblclick="nextLine()">
-          Knock, knock...
-        </p>
-    </div>
-</body>
-
-<style>
-    * {
-        margin: 0px;
-        padding: 0px;
-    }
-    .container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
-    #joke {
-        cursor: grabbing;
-        font-size: 2rem;
-    }
-    body{
-        user-select: none;
-    }
-</style>
-
-<script>
-    let knocks = 1
-    let answers = ["Knock, knock...", "Who's there?", "Dejav", "Dejav who?"]
-    function nextLine(){
-        let line = knocks%answers.length
-        document.querySelector("#joke").textContent = answers[line]
-        knocks++;
-    }
-</script>
-
-
-
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="projpwa — a fast, keyboard-friendly project planner." />
+    <meta name="theme-color" content="#2563eb" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon-180.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <title>projpwa</title>
+    <script type="module" crossorigin src="/assets/index-CWnOTGVb.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CtVUdhBp.css">
+  <link rel="manifest" href="/manifest.webmanifest"></head>
+  <body>
+    <div id="app"></div>
+  </body>
 </html>
